@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+
+        background: url("/Images/nature/hills-615429_960_720.jpg");
+        background-size: cover;
+        -webkit-background-size:cover;
+        -moz-background-size:cover;
+        -o-background-size:cover;
+
+
+    }
+    #box-container{
+        display: grid;
+        grid-template-columns: auto auto auto auto auto auto auto auto auto;
+        grid-gap:40px;
+        position: absolute;
+        left: 50%;
+        top:50%;
+        transform: translate(-50%,-50%);
+    }
+    #box-container div{
+       border: 5px solid black; 
+       width: 100px;
+       height: 100px;
+       text-align: center;
+       border-radius: 4px;
+       z-index: 100;
+       box-shadow: 2px 2px 9px orangered ;
+    
+    }
+    #box-container div:hover{
+       box-shadow: inset 0 0 15px 15px orangered, inset 0 0 4px 4px orangered;
+    }
+    #box-container div h1{
+        margin-bottom: 7px;
+
+    }
+    #box-container div p {
+    padding-top: 0px;
+    margin-top:0px;
+    }
+
+
+</style>
+<body>
+    
+    <main id="box-container">
+        <div onClick="play(this.id)" id="box1">
+            <h1>A</h1>
+            <p>CLAP</p>
+            <audio id="myAudio1">
+                <source src="/drum/Drumset Audio Files/clap.wav" type="audio/ogg">
+                <source src="/drum/Drumset Audio Files/clap.wav" type="audio/mpeg">
+            </audio>
+        </div>
+        <div onClick="play(this.id)" id="box2">
+            <h1>S</h1>
+            <p>HIHAT</p>
+            <audio id="myAudio2">
+                <source class="playMusic" src="/drum/Drumset Audio Files/hihat.wav" type="audio/ogg">
+                <source class="playMusic" src="/drum/Drumset Audio Files/hihat.wav" type="audio/mpeg">
+            </audio>
+
+        </div>
+        <div onClick="play(this.id)" id="box3">
+            <h1>D</h1>
+            <p>KICK</p>
+            <audio id="myAudio3">
+                <source class="playMusic" src="/drum/Drumset Audio Files/kick.wav" type="audio/ogg">
+                <source class="playMusic" src="/drum/Drumset Audio Files/kick.wav" type="audio/mpeg">
+
+            </audio>
+        </div>
+        <div onClick="play(this.id)" id="box4">
+            <h1>F</h1>
+            <p>OPENHAT</p>
+            <audio id="myAudio4">
+                <source class="playMusic" src="/drum/Drumset Audio Files/openhat.wav" type="audio/ogg">
+                <source class="playMusic" src="/drum/Drumset Audio Files/openhat.wav" type="audio/mpeg">
+            </audio>
+
+        </div>
+        <div onClick="play(this.id)" id="box5">
+            <h1>G</h1>
+            <p>BOOM</p>
+            <audio id="myAudio5">
+                <source class="playMusic" src="/drum/Drumset Audio Files/boom.wav" type="audio/ogg">
+                <source class="playMusic" src="/drum/Drumset Audio Files/boom.wav" type="audio/mpeg">
+            </audio>
+
+        </div>
+        <div onClick="play(this.id)" id="box6">
+            <h1>H</h1>
+            <p>RIDE</p>
+            <audio id="myAudio6">
+                <source class="playMusic" src="/drum/Drumset Audio Files/ride.wav" type="audio/mpeg">
+                <source class="playMusic" src="/drum/Drumset Audio Files/ride.wav" type="audio/mpeg">
+
+            </audio>
+        </div>
+        <div onClick="play(this.id)" id="box7">
+            <h1>J</h1>
+            <p>SNARE</p>
+            <audio id="myAudio7">
+                <source class="playMusic" src="/drum/Drumset Audio Files/snare.wav" type="audio/mpeg">
+                <source class="playMusic" src="/drum/Drumset Audio Files/snare.wav" type="audio/mpeg">
+            </audio>
+
+        </div>
+        <div onClick="play(this.id)" id="box8">
+            <h1>K</h1>
+            <p>TOM</p>
+            <audio id="myAudio8">
+                <source src="/drum/Drumset Audio Files/tom.wav" type="audio/mpeg">
+                <source src="/drum/Drumset Audio Files/tom.wav" type="audio/mpeg">
+            </audio>
+        </div>
+        <div onClick="play(this.id)" id="box9">
+            <h1>L</h1>
+            <p>TINK</p>
+            <audio id="myAudio9">
+                <source src="/drum/Drumset Audio Files/tink.wav" type="audio/mpeg">
+                <source src="/drum/Drumset Audio Files/tink.wav" type="audio/mpeg">
+            </audio>
+
+        </div>
+
+    </main>    
+
+<script type="text/javascript" src="./index.js"></script>
+</body>
+</html>
