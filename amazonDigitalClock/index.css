@@ -1,0 +1,182 @@
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat',sans-serif;
+    overflow-x: hidden;
+}
+
+#header-container{
+background-color: #1B2430;
+height: 12vh;
+text-align: center;
+position: relative;
+}
+
+#amazon-logo{
+    background-color: #1B2430;
+    width: 120px;
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+
+/*    position: absolute;
+    left: 50%;
+    top:4vh;
+    transform: translateX(-50%);
+    vertical-align: center;
+    */
+}
+
+
+#main-body{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}
+
+.clock{
+    margin-top:7vh;
+    height: 500px;
+    margin-left: 10vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+}
+
+
+#main-container{
+    width: 40vw;
+    margin-top:7vh
+
+}
+
+#image{
+    max-width: 400px;
+    height: auto;
+    display: inline-block;
+}
+
+#screentime{
+    visibility: visible;
+    position: absolute;
+    color: white;
+    left: 50%;
+    top:32%;
+    transform: translate(-50%,-50%);
+    font-size: 30px;
+}
+
+#heartBeat{
+    visibility: hidden;
+    position: absolute;
+    width: 100px;
+    left: 37%;
+    top:25%;
+    transform: translate(-50%,-50%);
+    animation: pulse 1s linear infinite;
+
+}
+
+#heartValue{
+    visibility: hidden;
+    position: absolute;
+    width: 100px;
+    left: 58%;
+    top:45%;
+    font-size: 25px;
+    color: white;
+    transform: translate(-50%,-50%);
+}
+
+@keyframes pulse {
+0% {
+    transform: scale(.75);
+}
+
+20% {
+    transform: scale(1);
+}
+
+40% {
+    transform: scale(.75);
+}
+
+60% {
+    transform: scale(1);
+}
+
+80% {
+    transform: scale(.75);
+}
+
+100% {
+    transform: scale(.75);
+}
+
+}
+
+
+#main-container>h1{
+    font-size: 35px;
+}
+#main-container>p{
+    color: #7F8487;
+    font-weight: 550;
+    margin-bottom: 5vh;
+}
+#main-container h2{
+    color: #413F42;
+    margin-bottom: 2vh;
+}
+
+.colorContainer{
+    display: grid;
+    grid-template-columns: 90px 90px 90px 90px 90px;
+    grid-gap: 10px;
+    overflow-x:auto;
+}
+#redPallet{
+    height: 60px;
+    background-color: #CA3D22;
+    border-radius: 8px;
+}
+#blackPallet{
+    height: 60px;
+    background-color: black;
+    border-radius: 8px;
+
+}
+#bluePallet {
+    height: 60px;
+    background-color: #565681;
+    border-radius: 8px;
+}
+#pinkPallet{
+    height:60px;
+    background-color: #E9C7BE;
+    border-radius: 8px;
+}
+#purplePallet{
+    height:60px;
+    background-color: #8A5362;
+    border-radius: 8px;
+}
+#button-container{
+    display: grid;
+    grid-template-columns: 100px 100px;
+    height: 40px;
+    grid-gap: 10px;
+}
+#button-container button{
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 15px;
+    background-color: #DDDCDD;
+}
+#buy{
+    margin-top: 5vh;
+    height: 50px;    
+    width: 130px;
+    font-weight: 650;
+    border-radius: 6px;
+    background-color: #F08E1D;
+}
