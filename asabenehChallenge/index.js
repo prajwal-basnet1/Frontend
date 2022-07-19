@@ -1,8 +1,11 @@
 const body=document.querySelector("body")
-const list=document.querySelectorAll("li")
+cnst list=document.querySelectorAll("li")
 const head1=document.querySelector('h1')
 const head2=document.querySelector('h2')
 let paragraph=document.querySelector("p")
+let icon=document.querySelectorAll('i')
+let classStatus=document.querySelectorAll(".classStatus")
+let languages=document.querySelectorAll(".languages")
 
 const bodyEdit=()=>{
 body.style.textAlign="center"
@@ -15,7 +18,7 @@ list.forEach((element)=>{
     element.style.listStyle="none"
     element.style.width="600px"
     element.style.margin="0 auto"
-    element.style.height="40px"
+    element.style.minheight="60px"
 })
 
 const head1Edit=()=>{
@@ -37,6 +40,7 @@ yearEdit()
 
 head2.style.textDecoration="underline"
 head1.style.fontSize="12px"
+
 
 let time=()=>{
 const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
@@ -63,28 +67,52 @@ paragraph.style.width="200px"
 
 setInterval(time,1000)
 
-
 let listedit=()=>{
     list[0].style.background="#5BBC7A"
-    list[0].style.display="flex"
+    list[0].style.display="grid"
+    list[0].style.gridTemplateColumns="auto auto auto"
+    list[0].style.justifyContent="space-between"
     list[0].style.paddingLeft="10px"
     list[0].style.paddingTop="15px"
     list[0].style.border="2px solid white"
-    
-    list[6].style.background="#F7DC5C"
-    list[6].style.display="flex"
-    list[6].style.paddingLeft="10px"
-    list[6].style.paddingTop="15px"
-    list[6].style.border="2px solid white"
 
-    for(let i=1;i<6;i++){
+    list[1].style.background="#F7DC5C"
+    list[1].style.justifyContent="space-between"
+    list[1].style.display="grid"
+    list[1].style.gridTemplateColumns="auto auto auto"
+    list[1].style.paddingLeft="10px"
+    list[1].style.paddingTop="15px"
+    list[1].style.border="2px solid white"
+
+    for(let i=2;i<7;i++){
 
     list[i].style.background="#EB695B"
-    list[i].style.display="flex"
+    list[i].style.justifyContent="space-between"
+
+    list[i].style.display="grid"
+    list[i].style.gridTemplateColumns="auto auto auto"
     list[i].style.paddingLeft="10px"
     list[i].style.paddingTop="15px"
     list[i].style.border="2px solid white"
-
     }
 }
 listedit()
+
+let eventlistner=()=>{
+for(let i=0;i<=7;i++){
+    classStatus[i].style.marginRight="15px"
+    icon[i].style.fontSize="14px"
+        languages[i].style.display="none"
+    languages[i].style.overflow="hidden"
+    icon[i].addEventListener("click",()=>{
+        if(languages[i].style.display === "block") {
+            languages[i].style.display="none"
+        }
+        else{
+            languages[i].style.display="block"
+        }
+    })
+   
+}
+}
+eventlistner()o
