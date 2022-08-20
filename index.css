@@ -1,0 +1,51 @@
+body{
+    margin:0;
+    padding: 0;
+    background-image: url("./images/mSPU63U.jpg");
+    background-size: cover;
+    height: 100vh;
+    background-position: center center;
+}
+
+#main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+#calculator{
+    width: 350px;
+    height: 400px;
+    background-color: #4B4749;
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    grid-template-rows: minmax(90px,auto) repeat(5,auto);
+    border-radius: 6px;
+}
+#calculator>button{
+    outline: none;
+    cursor: pointer;
+    background-color: rgba(75,71,73,0.4);
+    color: #fff;
+    font-size: 25px;
+}
+.double{
+    grid-column:span 2
+}
+.output{
+    grid-column: 1/-1;
+    margin-top: 10px; 
+    background-color: #fff;
+    display: flex; 
+    flex-direction:column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 10px;
+}
+#previous_output{
+    font-size: 20px;
+}
+#current_output{
+    font-size: 32px;
+
+}
